@@ -11,7 +11,7 @@ axios.interceptors.request.use(function (config) {
   //   config.data = qs.stringify(config.data)
   // }
   if (store.getters.token) {
-    config.headers['token'] = store.getters.token
+    config.headers['x-nideshop-token'] = store.getters.token
   }
   return config
 }, function (error) {
